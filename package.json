@@ -13,7 +13,11 @@
     "prettier:write": "prettier --write \"**/*.{js,json,md,sol,ts,yml}\"",
     "test": "hardhat test",
     "test:sepolia": "hardhat test --network sepolia",
-    "typechain": "cross-env TS_NODE_TRANSPILE_ONLY=true hardhat typechain"
+    "typechain": "cross-env TS_NODE_TRANSPILE_ONLY=true hardhat typechain",
+    "setup": "node scripts/setup.js",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia",
+    "deploy:localhost": "hardhat run scripts/deploy.ts --network localhost",
+    "verify": "hardhat run scripts/verify.ts --network sepolia"
   },
   "keywords": [
     "fhevm",
@@ -44,7 +48,8 @@
     "hardhat": "^2.26.0",
     "hardhat-gas-reporter": "^1.0.8",
     "mocha": "^11.7.1",
-    "@types/mocha": "^10.0.6",    "prettier": "^3.6.2",
+    "@types/mocha": "^10.0.6",
+    "prettier": "^3.6.2",
     "prettier-plugin-solidity": "^2.1.0",
     "rimraf": "^6.0.1",
     "solidity-coverage": "^0.8.16",
