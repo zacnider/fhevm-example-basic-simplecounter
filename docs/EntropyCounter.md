@@ -1,20 +1,20 @@
 # EntropyCounter
 
-Counter using EntropyOracle for encrypted randomness
+Learn how to create and increment encrypted counters using FHE.add
 
-## Overview
+## 📚 Overview
 
 @title EntropyCounter
-@notice Counter using EntropyOracle for encrypted randomness
-@dev Example demonstrating EntropyOracle integration: using entropy for counter increments
-This example shows:
-- How to integrate with EntropyOracle
+@notice Counter using encrypted randomness for encrypted randomness
+@dev This example teaches you how to integrate encrypted randomness into your FHEVM contracts: using entropy for counter increments
+In this example, you will learn:
+- How to integrate encrypted randomness
 - How to use encrypted entropy in FHE operations
 - How to combine entropy with encrypted values
 - Entropy-based counter increments
 
-@notice Constructor - sets EntropyOracle address
-@param _entropyOracle Address of EntropyOracle contract
+@notice Constructor - sets encrypted randomness address
+@param _encrypted randomness Address of encrypted randomness contract
 
 @notice Initialize counter with an encrypted value
 @param encryptedValue Encrypted initial value (euint64)
@@ -23,10 +23,10 @@ This example shows:
 
 @notice Request entropy for counter increment
 @param tag Unique tag for this increment request
-@return requestId Request ID from EntropyOracle
+@return requestId Request ID from encrypted randomness
 @dev Requires 0.00001 ETH fee. Call incrementWithEntropy() after request is fulfilled.
 
-@notice Increment counter using entropy from EntropyOracle
+@notice Increment counter using entropy from encrypted randomness
 @param requestId Request ID from requestIncrement()
 @dev Uses entropy to add randomness to counter increment
 
@@ -41,8 +41,8 @@ This example shows:
 @return Encrypted counter value (euint64)
 @dev Returns encrypted value - must be decrypted off-chain to see actual value
 
-@notice Get EntropyOracle address
-@return Address of EntropyOracle contract
+@notice Get encrypted randomness address
+@return Address of encrypted randomness contract
 
 @notice Get increment count
 @return Total number of increment requests made
